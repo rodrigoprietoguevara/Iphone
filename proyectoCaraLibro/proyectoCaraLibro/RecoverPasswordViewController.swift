@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseAnalytics
+
 
 class RecoverPasswordViewController: UIViewController, UITextFieldDelegate{
     
@@ -66,4 +70,18 @@ class RecoverPasswordViewController: UIViewController, UITextFieldDelegate{
         
     }
 
+    @IBAction func SendButton(_ sender: Any) {
+        let auth = Auth.auth()
+        auth.sendPasswordReset(withEmail: txtEmail.text!) { (error) in
+        if let error = error {
+            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        return
+                    }
+            let alertController = UIAlertController(title:"Hurray", message:"A password reset email has been sent!", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+                }
+    }
 }

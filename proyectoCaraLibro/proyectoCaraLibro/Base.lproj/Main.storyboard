@@ -457,6 +457,9 @@
                                                 <state key="normal" title="Enviar">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="SendButton:" destination="eFF-hI-AWM" eventType="touchUpInside" id="lcr-oh-Kt1"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa tu dirección de correo electrónico. Te enviaremos un enlace para que puedas crear una nueva contraseña." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iF-yV-d1p">
                                                 <rect key="frame" x="38" y="132" width="338" height="61"/>
@@ -470,7 +473,7 @@
                                                     <constraint firstAttribute="height" constant="34" id="Pxx-iD-oGD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
