@@ -525,6 +525,7 @@
                     <navigationItem key="navigationItem" id="Sqg-Vg-NfR"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="SendButton" destination="pls-Wh-XTy" id="9nK-qN-15c"/>
                         <outlet property="scrollView" destination="tjs-uo-3J8" id="EtU-he-rhT"/>
                         <outlet property="txtEmail" destination="GUg-Qh-D4L" id="RlM-d7-Cdc"/>
                     </connections>

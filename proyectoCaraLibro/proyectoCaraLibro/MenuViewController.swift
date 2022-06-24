@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 import FirebaseAuth
 
 class MenuViewController: UIViewController{
@@ -13,10 +14,19 @@ class MenuViewController: UIViewController{
     
     @IBOutlet weak var LogOutButton: UIButton!
     
-    
+    @IBOutlet weak var emailLabel: UILabel!
+    private let email: String
+    init(email: String){
+        self.email = email
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+         fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         LogOutButton.layer.cornerRadius = 10
+        emailLabel.text = email
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

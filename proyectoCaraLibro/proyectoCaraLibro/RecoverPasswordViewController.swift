@@ -17,6 +17,7 @@ class RecoverPasswordViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var SendButton: UIButton!
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
             self.view.endEditing(true)
@@ -32,6 +33,8 @@ class RecoverPasswordViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SendButton.layer.cornerRadius = 20
         
         //self.HideKeyboard()
         

@@ -112,7 +112,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
                 (result, error) in
                 
                 if let result = result, error == nil{
-                    self.navigationController? .pushViewController(MenuViewController(), animated: true)
+                    self.navigationController? .pushViewController(MenuViewController(email:result.user.email!), animated: true)
                     
                 } else{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
