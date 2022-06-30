@@ -398,6 +398,7 @@
                         <outlet property="photoUpButton" destination="Y2r-H6-lMq" id="NIw-ep-iM0"/>
                         <outlet property="scrollView" destination="Lar-YI-n1o" id="YrA-Eh-lOK"/>
                         <outlet property="signUpButton" destination="WRS-lE-tDJ" id="SiQ-rI-YDI"/>
+                        <outlet property="txtLastName" destination="OTn-bP-Qcc" id="PQB-Nj-9hW"/>
                         <outlet property="txtName" destination="gkT-Cc-3xL" id="GZ1-48-4g9"/>
                     </connections>
                 </viewController>

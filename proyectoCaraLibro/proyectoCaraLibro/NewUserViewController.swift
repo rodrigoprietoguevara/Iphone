@@ -8,6 +8,8 @@
 import UIKit
 import FirebaseAnalytics
 import FirebaseAuth
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class NewUserViewController: UIViewController, UITextFieldDelegate{
     
@@ -20,8 +22,10 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtName: UITextField!
-    
+    private let db = Firestore.firestore()
+
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
             self.view.endEditing(true)
         }
@@ -112,6 +116,11 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
                 (result, error) in
                 
                 if let result = result, error == nil{
+                    self.db.collection("users").document(email).setData([
+                        "nombre":self.txtName.text ?? "",
+                        "apellido":self.txtLastName.text ?? ""
+                    
+                    ])
                     self.navigationController? .pushViewController(MenuViewController(email:result.user.email!), animated: true)
                     
                 } else{

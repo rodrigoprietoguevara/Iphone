@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8806E3F8286D5172004D4335 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8806E3F7286D5172004D4335 /* FirebaseFirestore */; };
+		8806E3FA286D5216004D4335 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8806E3F9286D5216004D4335 /* FirebaseFirestoreSwift */; };
 		CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B852830BEB200828AD5 /* AppDelegate.swift */; };
 		CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B872830BEB200828AD5 /* SceneDelegate.swift */; };
 		CAB55B8D2830BEB200828AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8B2830BEB200828AD5 /* Main.storyboard */; };
@@ -44,7 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8806E3FA286D5216004D4335 /* FirebaseFirestoreSwift in Frameworks */,
 				FA3B6A9F285186A7007AF878 /* FirebaseAnalyticsSwift in Frameworks */,
+				8806E3F8286D5172004D4335 /* FirebaseFirestore in Frameworks */,
 				FA3B6AA1285186A7007AF878 /* FirebaseAuth in Frameworks */,
 				FA3B6A9D285186A7007AF878 /* FirebaseAnalytics in Frameworks */,
 			);
@@ -53,11 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8806E3F6286D5172004D4335 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAB55B792830BEB200828AD5 = {
 			isa = PBXGroup;
 			children = (
 				CAB55B842830BEB200828AD5 /* proyectoCaraLibro */,
 				CAB55B832830BEB200828AD5 /* Products */,
+				8806E3F6286D5172004D4335 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +120,8 @@
 				FA3B6A9C285186A7007AF878 /* FirebaseAnalytics */,
 				FA3B6A9E285186A7007AF878 /* FirebaseAnalyticsSwift */,
 				FA3B6AA0285186A7007AF878 /* FirebaseAuth */,
+				8806E3F7286D5172004D4335 /* FirebaseFirestore */,
+				8806E3F9286D5216004D4335 /* FirebaseFirestoreSwift */,
 			);
 			productName = proyectoCaraLibro;
 			productReference = CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */;
@@ -386,6 +400,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8806E3F7286D5172004D4335 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3B6A9B285186A7007AF878 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8806E3F9286D5216004D4335 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3B6A9B285186A7007AF878 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		FA3B6A9C285186A7007AF878 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA3B6A9B285186A7007AF878 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
