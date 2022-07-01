@@ -314,6 +314,9 @@
                                                 <state key="normal" title="Sube tu foto">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="UploadPhotoAction:" destination="r99-n5-SmV" eventType="touchUpInside" id="ibu-vN-e5w"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>

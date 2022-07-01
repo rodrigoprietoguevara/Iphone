@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class NewUserViewController: UIViewController, UITextFieldDelegate{
+class NewUserViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -25,7 +25,12 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var txtName: UITextField!
     private let db = Firestore.firestore()
+    
 
+    lazy var profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer) {
             self.view.endEditing(true)
         }
@@ -79,6 +84,32 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
         
     }
 
+    @IBAction func UploadPhotoAction(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        self.present(picker, animated: true, completion: nil)
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var selectedImageFromPicker: UIImage?
+        if let editedImage = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")]as? UIImage{
+            selectedImageFromPicker = editedImage
+        }else if let originalImage = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage{
+            
+            selectedImageFromPicker = originalImage
+        }
+        if let selectedImage = selectedImageFromPicker{
+            profileImageView.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
+        print(profileImageView)
+                
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print ("canceled picker")
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func signUpButtonAction(_ sender: Any) {
         if emailTextField.text?.isEmpty == true{
             let alert = UIAlertController(title: "Error", message: "Debe ingresar un correo", preferredStyle: UIAlertController.Style.alert)
@@ -116,9 +147,11 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
                 (result, error) in
                 
                 if let result = result, error == nil{
+                    
                     self.db.collection("users").document(email).setData([
                         "nombre":self.txtName.text ?? "",
-                        "apellido":self.txtLastName.text ?? ""
+                        "apellido":self.txtLastName.text ?? "",
+                        "foto":self.profileImageView.image ?? ""
                     
                     ])
                     self.navigationController? .pushViewController(MenuViewController(email:result.user.email!), animated: true)
