@@ -130,7 +130,7 @@ class NewUserViewController: UIViewController, UIImagePickerControllerDelegate, 
             return
         }
         if passwordTextField.text != password2TextField.text {
-            let alert = UIAlertController(title: "Error", message: "Las contrasenas deben coincidir", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Error", message: "Las contrasenias deben coincidir", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Enter Bales", style: UIAlertAction.Style.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
             return
