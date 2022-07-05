@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8806E3F8286D5172004D4335 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8806E3F7286D5172004D4335 /* FirebaseFirestore */; };
 		8806E3FA286D5216004D4335 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8806E3F9286D5216004D4335 /* FirebaseFirestoreSwift */; };
+		88FF304328741358003ADB68 /* LinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF304228741358003ADB68 /* LinkViewModel.swift */; };
+		88FF30472874137A003ADB68 /* LinkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF30462874137A003ADB68 /* LinkRepository.swift */; };
+		88FF304A28741391003ADB68 /* LinkDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF304928741391003ADB68 /* LinkDatasource.swift */; };
 		CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B852830BEB200828AD5 /* AppDelegate.swift */; };
 		CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B872830BEB200828AD5 /* SceneDelegate.swift */; };
 		CAB55B8D2830BEB200828AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8B2830BEB200828AD5 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88FF304228741358003ADB68 /* LinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewModel.swift; sourceTree = "<group>"; };
+		88FF30462874137A003ADB68 /* LinkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRepository.swift; sourceTree = "<group>"; };
+		88FF304928741391003ADB68 /* LinkDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDatasource.swift; sourceTree = "<group>"; };
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB55B852830BEB200828AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB55B872830BEB200828AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		88FF304128741307003ADB68 /* Links */ = {
+			isa = PBXGroup;
+			children = (
+				FA3B6AA92851958D007AF878 /* MenuViewController.swift */,
+				88FF304228741358003ADB68 /* LinkViewModel.swift */,
+				88FF304528741368003ADB68 /* Repository */,
+			);
+			path = Links;
+			sourceTree = "<group>";
+		};
+		88FF304528741368003ADB68 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				88FF30462874137A003ADB68 /* LinkRepository.swift */,
+				88FF304928741391003ADB68 /* LinkDatasource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		CAB55B792830BEB200828AD5 = {
 			isa = PBXGroup;
 			children = (
@@ -84,18 +109,18 @@
 		CAB55B842830BEB200828AD5 /* proyectoCaraLibro */ = {
 			isa = PBXGroup;
 			children = (
+				88FF304128741307003ADB68 /* Links */,
 				CAB55B852830BEB200828AD5 /* AppDelegate.swift */,
 				CAB55B872830BEB200828AD5 /* SceneDelegate.swift */,
 				CAB55B8B2830BEB200828AD5 /* Main.storyboard */,
-				FA5DD4702856E6100083CA59 /* MenuViewController.xib */,
 				CAB55B8E2830BEBB00828AD5 /* Assets.xcassets */,
 				CAB55B902830BEBB00828AD5 /* LaunchScreen.storyboard */,
+				FA5DD4702856E6100083CA59 /* MenuViewController.xib */,
 				CAB55B932830BEBB00828AD5 /* Info.plist */,
 				FA3B6A9828517FCD007AF878 /* GoogleService-Info.plist */,
 				CAE5F8A82831C2A0003BD4CA /* LoginViewController.swift */,
 				CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */,
 				CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */,
-				FA3B6AA92851958D007AF878 /* MenuViewController.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -183,9 +208,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE5F8AF2831C36F003BD4CA /* RecoverPasswordViewController.swift in Sources */,
+				88FF304A28741391003ADB68 /* LinkDatasource.swift in Sources */,
+				88FF304328741358003ADB68 /* LinkViewModel.swift in Sources */,
 				FA3B6AAA2851958D007AF878 /* MenuViewController.swift in Sources */,
 				CAE5F8A92831C2A0003BD4CA /* LoginViewController.swift in Sources */,
 				CAE5F8AC2831C33A003BD4CA /* NewUserViewController.swift in Sources */,
+				88FF30472874137A003ADB68 /* LinkRepository.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,
 				CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */,
 			);
