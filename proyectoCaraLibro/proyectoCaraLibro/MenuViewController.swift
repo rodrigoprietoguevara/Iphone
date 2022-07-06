@@ -19,7 +19,8 @@ class MenuViewController: UIViewController{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     private let email: String
-    lazy var userCollection = Firestore.firestore().collection("users").document(email)
+    var db: Firestore!
+    lazy var userCollection = db.collection("users").document(email)
     init(email: String){
         self.email = email
         super.init(nibName: nil, bundle: nil)
@@ -32,17 +33,24 @@ class MenuViewController: UIViewController{
         
         
         super.viewDidLoad()
-        
+        db = Firestore.firestore()
         LogOutButton.layer.cornerRadius = 10
         emailLabel.text = email
         getUsers()
         
     }
     func getUsers(){
+        let query = db.collection("users")
+        let query2 = query.whereField("nombre", isEqualTo: true)
         userCollection.getDocument{ (document, error) in
             if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                let dataDescription = document.data()
+                let nom = dataDescription?["nombre"] as? String ?? ""
+                let ape = dataDescription?["apellido"] as? String ?? ""
                 print("Document data: \(dataDescription)")
+                print(query2)
+                self.nameLabel.text = nom
+                self.lastNameLabel.text = ape
             } else {
                 print("Document does not exist")
             }
