@@ -12,6 +12,8 @@
             <connections>
                 <outlet property="LogOutButton" destination="BGl-8s-0h8" id="Afh-zG-KSC"/>
                 <outlet property="emailLabel" destination="sSk-as-KUN" id="UYI-KB-qmq"/>
+                <outlet property="lastNameLabel" destination="CdX-54-NTw" id="Mzm-OW-IVk"/>
+                <outlet property="nameLabel" destination="LLr-oc-Mf1" id="t2v-lI-Mul"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sb3-Jl-RPc"/>
             </connections>
         </placeholder>
@@ -55,16 +57,32 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLr-oc-Mf1">
+                                    <rect key="frame" x="176" y="291" width="62" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-54-NTw">
+                                    <rect key="frame" x="176" y="332" width="62" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                             <gestureRecognizers/>
                             <constraints>
+                                <constraint firstItem="LLr-oc-Mf1" firstAttribute="top" secondItem="sSk-as-KUN" secondAttribute="bottom" constant="20" id="Czt-Wo-mB4"/>
                                 <constraint firstItem="sSk-as-KUN" firstAttribute="top" secondItem="9fL-rv-4AD" secondAttribute="bottom" constant="25" id="Dfu-sE-P31"/>
                                 <constraint firstItem="sSk-as-KUN" firstAttribute="centerX" secondItem="Yxc-vb-7fN" secondAttribute="centerX" id="El6-kP-6Wo"/>
+                                <constraint firstItem="CdX-54-NTw" firstAttribute="centerX" secondItem="Yxc-vb-7fN" secondAttribute="centerX" id="IH7-8O-vLB"/>
                                 <constraint firstItem="9fL-rv-4AD" firstAttribute="centerX" secondItem="Yxc-vb-7fN" secondAttribute="centerX" id="St2-0J-BWh"/>
                                 <constraint firstItem="BGl-8s-0h8" firstAttribute="top" secondItem="Yxc-vb-7fN" secondAttribute="top" constant="10" id="TuJ-nd-sdu"/>
                                 <constraint firstAttribute="trailing" secondItem="BGl-8s-0h8" secondAttribute="trailing" constant="10" id="dfq-st-On7"/>
+                                <constraint firstItem="CdX-54-NTw" firstAttribute="top" secondItem="LLr-oc-Mf1" secondAttribute="bottom" constant="20" id="tyg-bl-sem"/>
                                 <constraint firstItem="9fL-rv-4AD" firstAttribute="top" secondItem="BGl-8s-0h8" secondAttribute="bottom" constant="40" id="ua7-Tr-Gda"/>
+                                <constraint firstItem="LLr-oc-Mf1" firstAttribute="centerX" secondItem="Yxc-vb-7fN" secondAttribute="centerX" id="wda-0W-a2C"/>
                             </constraints>
                         </view>
                     </subviews>
