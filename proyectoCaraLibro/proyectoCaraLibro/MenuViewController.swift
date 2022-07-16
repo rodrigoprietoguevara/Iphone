@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class MenuViewController: UIViewController{
-    
+    @Published var contactos:[Contactos] = []
     
     @IBOutlet weak var LogOutButton: UIButton!
     
@@ -40,6 +40,7 @@ class MenuViewController: UIViewController{
         
     }
     func getUsers(){
+        contactos.removeAll()
         let query = db.collection("users")
         let query2 = query.whereField("nombre", isEqualTo: true)
         userCollection.getDocument{ (document, error) in
@@ -47,8 +48,10 @@ class MenuViewController: UIViewController{
                 let dataDescription = document.data()
                 let nom = dataDescription?["nombre"] as? String ?? ""
                 let ape = dataDescription?["apellido"] as? String ?? ""
-                print("Document data: \(dataDescription)")
-                print(query2)
+                let conta = dataDescription?["contactos"] as? Array<String>
+                let cont = Contactos(id: ObjectIdentifier, nombre: String)                print("Document data:\(dataDescription)")
+                print(conta?[0])
+                self.contactos.append(<#T##newElement: Contactos##Contactos#>)
                 self.nameLabel.text = nom
                 self.lastNameLabel.text = ape
             } else {
