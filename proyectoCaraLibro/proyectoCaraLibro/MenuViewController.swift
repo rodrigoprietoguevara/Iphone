@@ -11,9 +11,10 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class MenuViewController: UIViewController{
-    @Published var contactos:[Contactos] = []
+    
     
     @IBOutlet weak var LogOutButton: UIButton!
+    @IBOutlet weak var ContactsButton: UIButton!
     
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -40,7 +41,7 @@ class MenuViewController: UIViewController{
         
     }
     func getUsers(){
-        contactos.removeAll()
+        
         let query = db.collection("users")
         let query2 = query.whereField("nombre", isEqualTo: true)
         userCollection.getDocument{ (document, error) in
@@ -48,10 +49,8 @@ class MenuViewController: UIViewController{
                 let dataDescription = document.data()
                 let nom = dataDescription?["nombre"] as? String ?? ""
                 let ape = dataDescription?["apellido"] as? String ?? ""
-                let conta = dataDescription?["contactos"] as? Array<String>
-                let cont = Contactos(id: ObjectIdentifier, nombre: String)                print("Document data:\(dataDescription)")
-                print(conta?[0])
-                self.contactos.append(<#T##newElement: Contactos##Contactos#>)
+                let contact = dataDescription!["contactos"] as? Array<String> ?? []
+                print(contact)
                 self.nameLabel.text = nom
                 self.lastNameLabel.text = ape
             } else {
@@ -72,5 +71,11 @@ class MenuViewController: UIViewController{
         } catch{
             
         }
+    }
+    
+    @IBAction func contactButtonAction(_ sender: Any) {
+        let a: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let b = a.instantiateViewController(withIdentifier:"Contacts") as! ContactsViewController
+        self.navigationController?.pushViewController(b, animated: true)
     }
 }

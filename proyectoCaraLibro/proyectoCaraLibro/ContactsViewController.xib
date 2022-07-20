@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Contacts" customModule="proyectoCaraLibro" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="NUa-I0-Jxx" id="tAq-ND-Wqt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="NUa-I0-Jxx">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icM-Wi-Xw5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-Wm-hDq">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftf-aW-DaQ">
+                                    <rect key="frame" x="284" y="10" width="120" height="25"/>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="FJq-ss-D52"/>
+                                        <constraint firstAttribute="height" constant="25" id="wzU-Jd-1Xm"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    <state key="normal" title="Cerrar Sesion">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ftf-aW-DaQ" secondAttribute="trailing" constant="10" id="Bu9-Dg-0ZM"/>
+                                <constraint firstItem="ftf-aW-DaQ" firstAttribute="top" secondItem="F3I-Wm-hDq" secondAttribute="top" constant="10" id="ixW-ay-4VJ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="F3I-Wm-hDq" secondAttribute="trailing" id="GCk-Ia-oGt"/>
+                        <constraint firstItem="F3I-Wm-hDq" firstAttribute="leading" secondItem="icM-Wi-Xw5" secondAttribute="leading" id="I0K-DL-5Ga"/>
+                        <constraint firstAttribute="bottom" secondItem="F3I-Wm-hDq" secondAttribute="bottom" id="kd4-MY-bco"/>
+                        <constraint firstItem="F3I-Wm-hDq" firstAttribute="top" secondItem="icM-Wi-Xw5" secondAttribute="top" id="q0o-84-Uqb"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="luQ-Lx-GVn"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Jzs-PO-9tX"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="f2i-tK-ebN"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="Contactos"/>
+            <constraints>
+                <constraint firstItem="f2i-tK-ebN" firstAttribute="bottom" secondItem="icM-Wi-Xw5" secondAttribute="bottom" id="1Yv-Ez-01y"/>
+                <constraint firstItem="f2i-tK-ebN" firstAttribute="trailing" secondItem="icM-Wi-Xw5" secondAttribute="trailing" id="6jE-CI-5hJ"/>
+                <constraint firstItem="F3I-Wm-hDq" firstAttribute="width" secondItem="icM-Wi-Xw5" secondAttribute="width" id="LxS-Gn-s7s"/>
+                <constraint firstItem="icM-Wi-Xw5" firstAttribute="height" secondItem="f2i-tK-ebN" secondAttribute="height" id="Ote-sa-91D"/>
+                <constraint firstItem="F3I-Wm-hDq" firstAttribute="height" secondItem="icM-Wi-Xw5" secondAttribute="height" id="f6i-Md-wua"/>
+                <constraint firstItem="icM-Wi-Xw5" firstAttribute="top" secondItem="f2i-tK-ebN" secondAttribute="top" id="hgm-pe-zNT"/>
+                <constraint firstItem="icM-Wi-Xw5" firstAttribute="leading" secondItem="f2i-tK-ebN" secondAttribute="leading" id="m3d-d4-qg2"/>
+                <constraint firstItem="icM-Wi-Xw5" firstAttribute="width" secondItem="NUa-I0-Jxx" secondAttribute="width" id="wfl-xb-rds"/>
+            </constraints>
+            <point key="canvasLocation" x="-430" y="-301"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

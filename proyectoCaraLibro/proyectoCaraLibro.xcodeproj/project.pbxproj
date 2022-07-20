@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8806E3F8286D5172004D4335 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8806E3F7286D5172004D4335 /* FirebaseFirestore */; };
 		8806E3FA286D5216004D4335 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8806E3F9286D5216004D4335 /* FirebaseFirestoreSwift */; };
-		88412C9128827A7500399267 /* Contactos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88412C9028827A7500399267 /* Contactos.swift */; };
+		889A10CF2887E928005A2077 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A10CE2887E928005A2077 /* ContactsViewController.swift */; };
 		CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B852830BEB200828AD5 /* AppDelegate.swift */; };
 		CAB55B882830BEB200828AD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB55B872830BEB200828AD5 /* SceneDelegate.swift */; };
 		CAB55B8D2830BEB200828AD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB55B8B2830BEB200828AD5 /* Main.storyboard */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		88412C9028827A7500399267 /* Contactos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contactos.swift; sourceTree = "<group>"; };
+		889A10CE2887E928005A2077 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		CAB55B822830BEB200828AD5 /* proyectoCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proyectoCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB55B852830BEB200828AD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB55B872830BEB200828AD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 				CAE5F8AB2831C33A003BD4CA /* NewUserViewController.swift */,
 				CAE5F8AE2831C36F003BD4CA /* RecoverPasswordViewController.swift */,
 				FA3B6AA92851958D007AF878 /* MenuViewController.swift */,
-				88412C9028827A7500399267 /* Contactos.swift */,
+				889A10CE2887E928005A2077 /* ContactsViewController.swift */,
 			);
 			path = proyectoCaraLibro;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE5F8AF2831C36F003BD4CA /* RecoverPasswordViewController.swift in Sources */,
+				889A10CF2887E928005A2077 /* ContactsViewController.swift in Sources */,
 				FA3B6AAA2851958D007AF878 /* MenuViewController.swift in Sources */,
-				88412C9128827A7500399267 /* Contactos.swift in Sources */,
 				CAE5F8A92831C2A0003BD4CA /* LoginViewController.swift in Sources */,
 				CAE5F8AC2831C33A003BD4CA /* NewUserViewController.swift in Sources */,
 				CAB55B862830BEB200828AD5 /* AppDelegate.swift in Sources */,

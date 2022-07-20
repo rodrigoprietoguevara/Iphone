@@ -213,7 +213,7 @@
         <!--New User View Controller-->
         <scene sceneID="O4g-bh-qMG">
             <objects>
-                <viewController id="r99-n5-SmV" customClass="NewUserViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewUser" id="r99-n5-SmV" customClass="NewUserViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zwW-Iy-psw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -419,7 +419,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="134.59821428571428"/>
+            <point key="canvasLocation" x="878" y="135"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="gz2-kS-6vX">
@@ -549,6 +549,105 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="805.79710144927537" y="849.77678571428567"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="AIM-J6-GFX">
+            <objects>
+                <viewController storyboardIdentifier="Contacts" id="4Wd-5X-xiV" customClass="ContactsViewController" customModule="proyectoCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDR-zF-dcW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLH-59-Kyd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-TK-iim">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contactos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-IO-d4o">
+                                                <rect key="frame" x="14" y="20" width="386" height="42"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-w0-zM4">
+                                                <rect key="frame" x="96" y="733" width="222" height="45"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="PIj-wN-ftK"/>
+                                                    <constraint firstAttribute="width" constant="222" id="lP7-lG-7An"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                                <state key="normal" title="Crear Cuenta">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signUpButtonAction:" destination="4Wd-5X-xiV" eventType="touchUpInside" id="Emr-xE-F1e"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.68235294120000001" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="zs4-IO-d4o" firstAttribute="top" secondItem="oVf-TK-iim" secondAttribute="top" constant="20" id="DFg-Dz-81K"/>
+                                            <constraint firstAttribute="bottom" secondItem="2tf-w0-zM4" secondAttribute="bottom" constant="40" id="TJv-5w-947"/>
+                                            <constraint firstAttribute="trailing" secondItem="zs4-IO-d4o" secondAttribute="trailing" constant="14" id="oRL-GG-BWm"/>
+                                            <constraint firstItem="2tf-w0-zM4" firstAttribute="centerX" secondItem="oVf-TK-iim" secondAttribute="centerX" id="v79-Hb-grl"/>
+                                            <constraint firstItem="zs4-IO-d4o" firstAttribute="leading" secondItem="oVf-TK-iim" secondAttribute="leading" constant="14" id="yhp-Ll-7l5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="w1S-HW-nga" appends="YES" id="Vum-LW-UWA"/>
+                                            <outletCollection property="gestureRecognizers" destination="1ZT-rH-bRd" appends="YES" id="UAF-vp-xTg"/>
+                                            <outletCollection property="gestureRecognizers" destination="l1T-GK-6RO" appends="YES" id="DgS-TJ-6Q3"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oVf-TK-iim" firstAttribute="leading" secondItem="nLH-59-Kyd" secondAttribute="leading" id="7EZ-8i-8hu"/>
+                                    <constraint firstAttribute="bottom" secondItem="oVf-TK-iim" secondAttribute="bottom" id="IKX-wc-GeB"/>
+                                    <constraint firstAttribute="trailing" secondItem="oVf-TK-iim" secondAttribute="trailing" id="bcC-rO-Ord"/>
+                                    <constraint firstItem="oVf-TK-iim" firstAttribute="height" secondItem="nLH-59-Kyd" secondAttribute="height" priority="250" id="gPf-ID-Kgn"/>
+                                    <constraint firstItem="oVf-TK-iim" firstAttribute="width" secondItem="nLH-59-Kyd" secondAttribute="width" id="s1P-oZ-ZT0"/>
+                                    <constraint firstItem="oVf-TK-iim" firstAttribute="top" secondItem="nLH-59-Kyd" secondAttribute="top" id="zWO-Ng-N5v"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="uHn-m8-pri"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="stA-ku-PO8"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tgr-9d-7RJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nLH-59-Kyd" firstAttribute="bottom" secondItem="Tgr-9d-7RJ" secondAttribute="bottom" id="9cr-QI-F1Z"/>
+                            <constraint firstItem="nLH-59-Kyd" firstAttribute="trailing" secondItem="Tgr-9d-7RJ" secondAttribute="trailing" id="CJ9-uc-EBt"/>
+                            <constraint firstItem="nLH-59-Kyd" firstAttribute="top" secondItem="Tgr-9d-7RJ" secondAttribute="top" id="HME-XL-NDg"/>
+                            <constraint firstItem="nLH-59-Kyd" firstAttribute="leading" secondItem="Tgr-9d-7RJ" secondAttribute="leading" id="WUK-78-5QJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cF4-hy-TrA"/>
+                    <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="scrollView" destination="nLH-59-Kyd" id="v5s-Oe-I8O"/>
+                        <outlet property="signUpButton" destination="2tf-w0-zM4" id="0Al-Kz-tTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMA-1J-CgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w1S-HW-nga">
+                    <connections>
+                        <action selector="tapToCloseKeyboardWithSender:" destination="4Wd-5X-xiV" id="fGe-1m-Mr6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="1ZT-rH-bRd">
+                    <connections>
+                        <action selector="swipeToOpenKeyboard:" destination="4Wd-5X-xiV" id="qEo-LK-sqN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="l1T-GK-6RO">
+                    <connections>
+                        <action selector="swipeToCloseKeyboard:" destination="4Wd-5X-xiV" id="4gs-9i-jT1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1622" y="143"/>
         </scene>
     </scenes>
     <resources>
