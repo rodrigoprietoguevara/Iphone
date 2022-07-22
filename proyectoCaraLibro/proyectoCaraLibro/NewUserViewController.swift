@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class NewUserViewController: UIViewController, UITextFieldDelegate{
+class NewUserViewController:UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -130,5 +130,8 @@ class NewUserViewController: UIViewController, UITextFieldDelegate{
                 }
             }
         }
+    }
+    @IBAction private func clickBtnBack(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
     }
 }

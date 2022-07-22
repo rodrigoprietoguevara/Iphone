@@ -78,4 +78,5 @@ class MenuViewController: UIViewController{
         let b = a.instantiateViewController(withIdentifier:"Contacts") as! ContactsViewController
         self.navigationController?.pushViewController(b, animated: true)
     }
+
 }

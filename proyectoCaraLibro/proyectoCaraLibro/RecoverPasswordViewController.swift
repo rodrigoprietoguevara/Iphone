@@ -87,4 +87,7 @@ class RecoverPasswordViewController: UIViewController, UITextFieldDelegate{
             self.present(alertController, animated: true, completion: nil)
                 }
     }
+    @IBAction private func clickBtnBack(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
 }

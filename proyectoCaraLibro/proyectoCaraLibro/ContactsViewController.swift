@@ -49,4 +49,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate {
         scrollView.scrollIndicatorInsets = scrollView.contentInset
         
     }
+    @IBAction private func clickBtnBack(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
 }
